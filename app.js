@@ -1,11 +1,9 @@
 const express = require('express');
 const shell = require('shelljs');
-const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = 80;
-
-app.use(bodyParser.json());
+app.use(express.json());
 
 const runningShell = () => {
     shell.exec('./shell/deploy.sh');
